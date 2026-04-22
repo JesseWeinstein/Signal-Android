@@ -27,7 +27,7 @@ jobs:
       uses: gradle/actions/setup-gradle@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e
 
     - name: Build with Gradle
-      run: ./gradlew :Signal-Android:lintPlayProdRelease
+      run: ./gradlew :core:util:lint
 
     - name: Archive reports for failed build
       if: ${{ failure() }}
