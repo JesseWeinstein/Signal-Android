@@ -22,7 +22,6 @@ jobs:
       with:
         distribution: temurin
         java-version: 17
-        cache: gradle
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e
