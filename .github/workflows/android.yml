@@ -26,7 +26,10 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e
 
-    - name: Build with Gradle
+    - name: Build with Gradle (up to minifyPlayProdReleaseWithR8)
+      run: ./gradlew :Signal-Android:minifyPlayProdReleaseWithR8
+
+    - name: Build with Gradle (rest)
       run: ./gradlew :Signal-Android:bundlePlayProdRelease
 
     - name: Archive reports for failed build
