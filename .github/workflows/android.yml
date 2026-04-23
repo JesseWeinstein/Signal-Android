@@ -26,6 +26,9 @@ jobs:
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@50e97c2cd7a37755bbfafc9c5b7cafaece252f6e
 
+    - name: Build with Gradle (up to compilePlayProdReleaseJavaWithJavac)
+      run: ./gradlew :Signal-Android:compilePlayProdReleaseJavaWithJavac
+
     - name: Build with Gradle (up to minifyPlayProdReleaseWithR8)
       run: ./gradlew :Signal-Android:minifyPlayProdReleaseWithR8
 
